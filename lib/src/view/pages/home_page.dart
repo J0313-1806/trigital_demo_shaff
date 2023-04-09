@@ -67,10 +67,13 @@ class HomePage extends StatelessWidget {
                     color: Color(AppColors.white),
                   ),
                 ),
-                subtitle: const Text(
-                  'Fortnite meat',
-                  style: TextStyle(
-                    color: Color(AppColors.grey),
+                subtitle: const Padding(
+                  padding: EdgeInsets.only(top: 10.0),
+                  child: Text(
+                    'Fortnite meat',
+                    style: TextStyle(
+                      color: Color(AppColors.grey),
+                    ),
                   ),
                 ),
                 trailing: IconButton(
@@ -82,6 +85,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               ListTile(
+                visualDensity: const VisualDensity(horizontal: 0, vertical: -4),
                 minVerticalPadding: 0,
                 leading: DottedBorder(
                   color: Colors.transparent,
@@ -112,6 +116,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 10,
               ),
               const Align(
                 alignment: Alignment.centerLeft,
