@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trigital_demo_shaff/src/constants/app_colors.dart';
+import 'package:trigital_demo_shaff/src/constants/app_strings.dart';
 
 class ActivityPage extends StatelessWidget {
   const ActivityPage({super.key});
@@ -10,7 +11,7 @@ class ActivityPage extends StatelessWidget {
       backgroundColor: Color(AppColors.black),
       body: Center(
         child: Text(
-          'Activity Page',
+          AppString.activityPage,
           style: TextStyle(
             color: Color(AppColors.white),
           ),

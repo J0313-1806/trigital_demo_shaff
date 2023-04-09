@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:trigital_demo_shaff/src/constants/app_colors.dart';
+import 'package:trigital_demo_shaff/src/constants/app_strings.dart';
 import 'package:trigital_demo_shaff/src/controller/main_sc_controller.dart';
 import 'package:trigital_demo_shaff/src/controller/menu_sc_controller.dart';
 import 'package:trigital_demo_shaff/src/widget/anim_chevron.dart';
@@ -21,8 +22,8 @@ class MenuScreen extends StatelessWidget {
             children: <Widget>[
               IconButton(
                 splashRadius: 24,
-                onPressed: () async {
-                  mainSController.zoomDrawerController.value.close;
+                onPressed: () {
+                  mainSController.zoomDrawerController.value.close?.call();
                 },
                 icon: Container(
                   padding: const EdgeInsets.all(8.0),
@@ -70,7 +71,7 @@ class MenuScreen extends StatelessWidget {
               children: <Widget>[
                 ExpansionTile(
                   title: const Text(
-                    'Favourite Games',
+                    AppString.favGames,
                     style: TextStyle(
                       color: Color(
                         AppColors.white,
@@ -87,12 +88,10 @@ class MenuScreen extends StatelessWidget {
                         isExpanded:
                             menuScontroller.favouriteGameTileExpanded.value),
                   ),
-
                   onExpansionChanged: (value) =>
                       menuScontroller.favouriteGameTileExpanded(value),
                   expandedAlignment: Alignment.centerLeft,
                   expandedCrossAxisAlignment: CrossAxisAlignment.start,
-                  // tilePadding: const EdgeInsets.all(0),
                   children: List.generate(
                     menuScontroller.favouriteGamesList.value.length,
                     (index) => Padding(
@@ -168,7 +167,7 @@ class MenuScreen extends StatelessWidget {
                 ),
                 ExpansionTile(
                   title: const Text(
-                    'Subscriptions',
+                    AppString.subscriptions,
                     style: TextStyle(
                       color: Color(
                         AppColors.white,
@@ -215,7 +214,7 @@ class MenuScreen extends StatelessWidget {
                     color: Color(AppColors.grey),
                   ),
                   title: const Text(
-                    'Settings',
+                    AppString.settings,
                     style: TextStyle(
                       color: Color(
                         AppColors.grey,

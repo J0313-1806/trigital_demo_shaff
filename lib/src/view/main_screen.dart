@@ -21,6 +21,7 @@ class StartPage extends StatelessWidget {
       mainScreenScale: 0.25,
       menuScreenWidth: double.infinity,
       angle: 5,
+      androidCloseOnBackTap: true,
       style: DrawerStyle.defaultStyle,
     );
   }
@@ -37,7 +38,7 @@ class MainScreen extends StatelessWidget {
         leading: IconButton(
           splashRadius: 24,
           onPressed: () async {
-            _mainSController.zoomDrawerController.value.open;
+            _mainSController.zoomDrawerController.value.open?.call();
           },
           icon: Container(
             padding: const EdgeInsets.all(8.0),

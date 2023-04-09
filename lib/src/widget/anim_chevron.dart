@@ -11,9 +11,11 @@ class AnimatedChevron extends StatelessWidget {
     return AnimatedRotation(
       duration: const Duration(milliseconds: 150),
       turns: isExpanded ? 0.5 : 0,
-      child: const Icon(
+      child: Icon(
         Icons.arrow_drop_down_circle,
-        color: Color(AppColors.grey),
+        color: isExpanded
+            ? const Color(AppColors.white)
+            : const Color(AppColors.grey),
       ),
     );
   }

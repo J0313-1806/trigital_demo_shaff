@@ -1,6 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:trigital_demo_shaff/src/constants/app_colors.dart';
+import 'package:trigital_demo_shaff/src/constants/app_strings.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -19,13 +20,13 @@ class HomePage extends StatelessWidget {
                 style: TextStyle(fontSize: 28),
                 children: [
                   TextSpan(
-                    text: 'Let\'s ',
+                    text: AppString.homeMain1,
                     style: TextStyle(
                       color: Color(AppColors.white),
                     ),
                   ),
                   TextSpan(
-                    text: 'Discover',
+                    text: AppString.homeMain2,
                     style: TextStyle(
                       color: Color(AppColors.yellow),
                     ),
@@ -92,7 +93,7 @@ class HomePage extends StatelessWidget {
                 title: Row(
                   children: [
                     const Text(
-                      '12 m views',
+                      '12 m ${AppString.views}',
                       style:
                           TextStyle(color: Color(AppColors.grey), fontSize: 14),
                     ),
@@ -105,7 +106,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     const Text(
-                      '2 days ago',
+                      '2 ${AppString.daysAgo}',
                       style:
                           TextStyle(color: Color(AppColors.grey), fontSize: 14),
                     ),
@@ -115,7 +116,7 @@ class HomePage extends StatelessWidget {
               const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Popular Streamers',
+                  AppString.homeSubMain,
                   style: TextStyle(
                     color: Color(AppColors.white),
                     fontWeight: FontWeight.bold,
@@ -178,7 +179,7 @@ class HomePage extends StatelessWidget {
                                     ),
                                   ),
                                   TextSpan(
-                                    text: ' Followers',
+                                    text: AppString.followers,
                                     style: TextStyle(
                                       color: Color(AppColors.grey),
                                       fontSize: 12,
@@ -197,7 +198,7 @@ class HomePage extends StatelessWidget {
                                 padding: EdgeInsets.zero,
                               ),
                               child: const Text(
-                                'Streamer',
+                                AppString.streamerBtn,
                                 style: TextStyle(
                                   color: Color(AppColors.white),
                                   fontSize: 10,

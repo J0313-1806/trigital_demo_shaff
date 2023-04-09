@@ -19,7 +19,7 @@ class MenuSController extends GetxController {
   RxBool favouriteGameTileExpanded = RxBool(false);
   RxBool subscriptionTileExpanded = RxBool(false);
 
-  /// For turning the trailing icon in expansion list tile
+  /// For rotating the trailing icon in expansion list tile
   void onExpansionChange(bool value) {
     favouriteGameTileExpanded(value);
   }
